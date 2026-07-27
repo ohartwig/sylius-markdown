@@ -1,0 +1,43 @@
+{#
+    SPDX-FileCopyrightText: 2026 Kai Ole Hartwig
+    SPDX-License-Identifier: MIT
+
+    Markdown representation of a product, built from entity data rather than
+    from the rendered page.
+
+    Override in an application at
+    templates/bundles/KohSyliusMarkdownBundle/product.md.twig.
+#}
+# {{ product.getTranslation(locale).name|default(product.code) }}
+{% set shortDescription = product.getTranslation(locale).shortDescription|default('') %}
+{% if shortDescription %}
+> {{ shortDescription|striptags }}
+{% endif %}
+{% set variants = product.enabledVariants %}
+{% if variants|length %}
+## Variants
+
+| Variant | Code | Price | Availability |
+| --- | --- | --- | --- |
+{% for variant in variants %}
+{%- set pricing = variant.getChannelPricingForChannel(channel) -%}
+| {{ variant.getTranslation(locale).name|default(variant.code) }} | {{ variant.code }} | {% if pricing and pricing.price is not null %}{{ (pricing.price / 100)|number_format(2, ',', '.') }} {{ channel.baseCurrency.code }}{% else %}—{% endif %} | {% if variant.inStock %}in stock{% else %}out of stock{% endif %} |
+{% endfor %}
+{% endif %}
+{% set description = product.getTranslation(locale).description|default('') %}
+{% if description %}
+## Description
+
+{{ description|markdown_from_html }}
+{% endif %}
+{% if product.taxons|length %}
+## Categories
+
+{% for taxon in product.taxons %}
+- {{ taxon.getTranslation(locale).name|default(taxon.code) }}
+{% endfor %}
+{% endif %}
+
+---
+
+Source: {{ url }}

@@ -1,0 +1,80 @@
+<?php
+
+// SPDX-FileCopyrightText: 2026 Kai Ole Hartwig
+// SPDX-License-Identifier: MIT
+
+declare(strict_types=1);
+
+namespace Koh\SyliusMarkdown\EventListener;
+
+use Koh\SyliusAgentContracts\Context\AgentContextFactoryInterface;
+use Koh\SyliusMarkdown\Negotiation\AcceptParser;
+use Koh\SyliusMarkdown\Renderer\MarkdownResolver;
+use Koh\SyliusMarkdown\Renderer\TokenEstimator;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
+
+/**
+ * Answers `Accept: text/markdown` before the controller runs.
+ *
+ * Priority 4 puts this below Symfony's firewall (8): the security token is
+ * already established, so a Markdown request for /account/… is subject to the
+ * same access control as the HTML one. Above it, the listener would be an
+ * authentication bypass.
+ *
+ * Short-circuiting via setResponse() is the point — the controller and the
+ * whole Twig render never happen. Rendering HTML and throwing it away is the
+ * obvious implementation and costs the full page for every agent hit.
+ */
+final class MarkdownNegotiationListener
+{
+    public function __construct(
+        private readonly AcceptParser $acceptParser,
+        private readonly MarkdownResolver $resolver,
+        private readonly AgentContextFactoryInterface $contextFactory,
+        private readonly TokenEstimator $tokenEstimator,
+        private readonly int $maxAge = 3600,
+        private readonly bool $enabled = true,
+    ) {
+    }
+
+    public function __invoke(RequestEvent $event): void
+    {
+        if (!$this->enabled || !$event->isMainRequest()) {
+            return;
+        }
+
+        $request = $event->getRequest();
+
+        // Only safe, cacheable methods. A POST that happens to accept Markdown
+        // still has to reach its controller.
+        if (!$request->isMethodCacheable()) {
+            return;
+        }
+
+        if (!$this->acceptParser->wantsMarkdown($request->headers->get('Accept'))) {
+            return;
+        }
+
+        $markdown = $this->resolver->resolve($request, $this->contextFactory->create());
+
+        // No representation: fall through to HTML rather than serve an empty 200.
+        if (null === $markdown) {
+            return;
+        }
+
+        $response = new Response($markdown, Response::HTTP_OK, [
+            'Content-Type' => 'text/markdown; charset=utf-8',
+            'Vary' => 'Accept',
+            'X-Markdown-Tokens' => (string) $this->tokenEstimator->estimate($markdown),
+            'Link' => \sprintf('<%s>; rel="canonical"', $request->getUri()),
+        ]);
+
+        $response->setPublic();
+        $response->setMaxAge($this->maxAge);
+        $response->setEtag(hash('xxh128', $markdown));
+        $response->isNotModified($request);
+
+        $event->setResponse($response);
+    }
+}

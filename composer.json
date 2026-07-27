@@ -1,0 +1,61 @@
+{
+    "name": "koh/sylius-markdown",
+    "description": "Accept: text/markdown content negotiation for Sylius, rendering entity data through templates rather than converting rendered HTML.",
+    "type": "sylius-bundle",
+    "license": "MIT",
+    "keywords": ["sylius", "markdown", "content-negotiation", "agent", "ai", "llm"],
+    "authors": [
+        { "name": "Kai Ole Hartwig", "email": "mail@ole-hartwig.eu" }
+    ],
+    "homepage": "https://ole-hartwig.eu/open-source/sylius-agent-ready",
+    "support": {
+        "issues": "https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/-/issues",
+        "source": "https://github.com/ole-hartwig/sylius-markdown"
+    },
+    "require": {
+        "php": "^8.2",
+        "koh/sylius-agent-contracts": "^1.0",
+        "league/html-to-markdown": "^5.1",
+        "sylius/sylius": "^2.0",
+        "symfony/config": "^7.4",
+        "symfony/dependency-injection": "^7.4",
+        "symfony/event-dispatcher": "^7.4",
+        "symfony/http-foundation": "^7.4",
+        "symfony/http-kernel": "^7.4",
+        "twig/twig": "^3.10"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Koh\\SyliusMarkdown\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Koh\\SyliusMarkdown\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://git.ole-hartwig.eu/api/v4/group/1091/-/packages/composer/packages.json",
+            "only": ["koh/*"]
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
