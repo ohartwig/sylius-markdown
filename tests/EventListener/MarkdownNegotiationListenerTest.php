@@ -105,6 +105,37 @@ final class MarkdownNegotiationListenerTest extends TestCase
         self::assertSame(304, $response?->getStatusCode());
     }
 
+    /**
+     * This listener runs below the firewall so that a provider may cover an
+     * access-controlled route. That is exactly why the response must not be
+     * marked shared-cacheable when a session is in play: `public` would let a
+     * shared cache serve one signed-in user's document to the next caller under
+     * the same URL, and `Vary: Accept` alone does not key on the session.
+     */
+    public function testACookieBearingRequestIsNotSharedCacheable(): void
+    {
+        $response = $this->dispatch('text/markdown', markdown: '# Konto', withSessionCookie: true)->getResponse();
+
+        self::assertNotNull($response);
+        self::assertStringContainsString('private', (string) $response->headers->get('Cache-Control'));
+        self::assertStringNotContainsString('public', (string) $response->headers->get('Cache-Control'));
+        self::assertSame(['Accept', 'Cookie'], $response->getVary());
+    }
+
+    /**
+     * The agent case must stay untouched — a crawler sends no cookies, and
+     * serving it a cacheable document is what this package is for.
+     */
+    public function testAnAnonymousRequestStaysSharedCacheable(): void
+    {
+        $response = $this->dispatch('text/markdown', markdown: '# Zigarre')->getResponse();
+
+        self::assertNotNull($response);
+        self::assertStringContainsString('public', (string) $response->headers->get('Cache-Control'));
+        self::assertSame(3600, $response->getMaxAge());
+        self::assertSame(['Accept'], $response->getVary());
+    }
+
     private function dispatch(
         string $accept,
         ?string $markdown,
@@ -112,11 +143,15 @@ final class MarkdownNegotiationListenerTest extends TestCase
         int $requestType = HttpKernelInterface::MAIN_REQUEST,
         bool $enabled = true,
         ?string $ifNoneMatch = null,
+        bool $withSessionCookie = false,
     ): RequestEvent {
         $request = Request::create('/products/zigarre', $method);
         $request->headers->set('Accept', $accept);
         if (null !== $ifNoneMatch) {
             $request->headers->set('If-None-Match', $ifNoneMatch);
+        }
+        if ($withSessionCookie) {
+            $request->cookies->set('PHPSESSID', 'abc123');
         }
 
         $listener = new MarkdownNegotiationListener(

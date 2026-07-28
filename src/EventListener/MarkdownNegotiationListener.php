@@ -70,9 +70,25 @@ final class MarkdownNegotiationListener
             'Link' => \sprintf('<%s>; rel="canonical"', $request->getUri()),
         ]);
 
-        $response->setPublic();
-        $response->setMaxAge($this->maxAge);
         $response->setEtag(hash('xxh128', $markdown));
+
+        // Shared caching is safe only while nothing about the response depends
+        // on who asked. This listener sits below the firewall precisely so a
+        // provider may cover an access-controlled route — and the moment one
+        // does, `public` would let a shared cache hand one admin's document to
+        // the next caller under the same URL. A request carrying cookies is the
+        // conservative signal for "there is a session behind this".
+        //
+        // The agent case is unaffected: a crawler sends no cookies and still
+        // gets the public, cacheable response this package exists to serve.
+        if ($request->cookies->count() > 0) {
+            $response->setPrivate();
+            $response->headers->set('Vary', 'Accept, Cookie');
+        } else {
+            $response->setPublic();
+            $response->setMaxAge($this->maxAge);
+        }
+
         $response->isNotModified($request);
 
         $event->setResponse($response);
