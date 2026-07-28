@@ -1,3 +1,15 @@
+## [1.1.1](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.0...v1.1.1) (2026-07-28)
+
+### :bug: Fixes
+
+* do not mark a session-bearing markdown response shared-cacheable ([3879da6](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/3879da6a5cd63ca1876fa3086209ffd37b9c1020))
+
+### :repeat: Chores
+
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.26.0 ([4f81525](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/4f815252f29b852cf92368adf57a0e8b250e6ad4))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.26.1 ([bc44a35](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/bc44a351289cc811c7bbc5cf78df68b99f32dde5))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.26.3 ([bef52e0](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/bef52e06a38d08c014e2c7f2e8ea05595948524e))
+
 ## [1.1.0](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.0.0...v1.1.0) (2026-07-28)
 
 ### :sparkles: Features
