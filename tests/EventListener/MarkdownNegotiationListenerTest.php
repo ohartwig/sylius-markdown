@@ -106,6 +106,22 @@ final class MarkdownNegotiationListenerTest extends TestCase
     }
 
     /**
+     * rel="canonical" is a claim about identity that agents and search engines
+     * take at face value, so it must not be derived from a header the caller
+     * controls. The context resolves it from the channel instead — which is how
+     * the rest of this package family builds URLs.
+     */
+    public function testTheCanonicalLinkComesFromTheChannelNotTheHostHeader(): void
+    {
+        $response = $this->dispatch('text/markdown', markdown: '# Zigarre', spoofedHost: 'attacker.example')->getResponse();
+
+        self::assertSame(
+            '<https://shop.example.com/products/zigarre>; rel="canonical"',
+            $response?->headers->get('Link'),
+        );
+    }
+
+    /**
      * This listener runs below the firewall so that a provider may cover an
      * access-controlled route. That is exactly why the response must not be
      * marked shared-cacheable when a session is in play: `public` would let a
@@ -144,9 +160,13 @@ final class MarkdownNegotiationListenerTest extends TestCase
         bool $enabled = true,
         ?string $ifNoneMatch = null,
         bool $withSessionCookie = false,
+        ?string $spoofedHost = null,
     ): RequestEvent {
         $request = Request::create('/products/zigarre', $method);
         $request->headers->set('Accept', $accept);
+        if (null !== $spoofedHost) {
+            $request->headers->set('Host', $spoofedHost);
+        }
         if (null !== $ifNoneMatch) {
             $request->headers->set('If-None-Match', $ifNoneMatch);
         }

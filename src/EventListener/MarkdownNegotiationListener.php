@@ -56,7 +56,8 @@ final class MarkdownNegotiationListener
             return;
         }
 
-        $markdown = $this->resolver->resolve($request, $this->contextFactory->create());
+        $context = $this->contextFactory->create();
+        $markdown = $this->resolver->resolve($request, $context);
 
         // No representation: fall through to HTML rather than serve an empty 200.
         if (null === $markdown) {
@@ -67,7 +68,14 @@ final class MarkdownNegotiationListener
             'Content-Type' => 'text/markdown; charset=utf-8',
             'Vary' => 'Accept',
             'X-Markdown-Tokens' => (string) $this->tokenEstimator->estimate($markdown),
-            'Link' => \sprintf('<%s>; rel="canonical"', $request->getUri()),
+            // Built from the channel, not from the request. rel="canonical" is a
+            // claim about identity, and agents and search engines take it at
+            // face value — deriving it from the Host header would let a request
+            // name its own canonical. The rest of this package family resolves
+            // URLs through AgentContext for the same reason; this line was the
+            // exception. Note that it drops the query string, which is normally
+            // what a canonical wants.
+            'Link' => \sprintf('<%s>; rel="canonical"', $context->url($request->getPathInfo())),
         ]);
 
         $response->setEtag(hash('xxh128', $markdown));
