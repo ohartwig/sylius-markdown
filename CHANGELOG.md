@@ -1,3 +1,9 @@
+## [1.1.2](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.1...v1.1.2) (2026-07-28)
+
+### :bug: Fixes
+
+* build the canonical link from the channel, not the Host header ([959bca0](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/959bca07748e71aec520bbd3bc293449903b2904))
+
 ## [1.1.1](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.0...v1.1.1) (2026-07-28)
 
 ### :bug: Fixes
