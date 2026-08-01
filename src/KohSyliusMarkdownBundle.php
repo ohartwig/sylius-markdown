@@ -42,7 +42,7 @@ final class KohSyliusMarkdownBundle extends AbstractBundle
     }
 
     /**
-     * @param array<string, mixed> $config
+     * @param array<mixed> $config
      */
     public function loadExtension(array $config, ContainerConfigurator $container, ContainerBuilder $builder): void
     {
@@ -51,7 +51,7 @@ final class KohSyliusMarkdownBundle extends AbstractBundle
 
         $container->import('../config/services.php');
 
-        if (!($config['products'] ?? true)) {
+        if (false === ($config['products'] ?? true)) {
             $builder->removeDefinition(Provider\ProductMarkdownProvider::class);
         }
     }

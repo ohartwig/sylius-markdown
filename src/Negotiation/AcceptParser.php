@@ -61,7 +61,7 @@ final class AcceptParser
 
         foreach (explode(',', $accept) as $part) {
             $params = explode(';', trim($part));
-            $type = strtolower(trim(array_shift($params) ?? ''));
+            $type = strtolower(trim(array_shift($params)));
 
             if ('' === $type) {
                 continue;
