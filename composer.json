@@ -35,6 +35,7 @@
         "twig/twig": "^3.10"
     },
     "require-dev": {
+        "moselwal/dev-sylius": "^1.0",
         "phpstan/phpstan": "^2.0",
         "phpunit/phpunit": "^11.0"
     },
@@ -60,6 +61,13 @@
         }
     },
     "repositories": [
+        {
+            "type": "composer",
+            "url": "https://git.ole-hartwig.eu/api/v4/group/175/-/packages/composer/packages.json",
+            "only": [
+                "moselwal/*"
+            ]
+        },
         {
             "type": "composer",
             "url": "https://git.ole-hartwig.eu/api/v4/group/1091/-/packages/composer/packages.json",
