@@ -1,3 +1,17 @@
+## [1.1.4](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.3...v1.1.4) (2026-08-01)
+
+### :bug: Fixes
+
+* **phpstan:** resolve all 5 level-8 findings without suppressions ([0e20333](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/0e20333fc9f66045d04ada88d829336f4184b4db))
+
+### :zap: Refactor
+
+* **phpstan:** use the shared level-8 standard ([ff8a94e](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/ff8a94e63539dc829fe7746c151af9744c76cd21))
+
+### :repeat: Chores
+
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.32.2 ([88fbd0b](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/88fbd0b225121e690d6212228fea1ae2e68c4c3e))
+
 ## [1.1.3](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.2...v1.1.3) (2026-08-01)
 
 ### :repeat: Chores
