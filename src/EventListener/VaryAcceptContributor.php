@@ -32,7 +32,7 @@ final class VaryAcceptContributor implements ResponseHeaderContributorInterface
 
     public function supports(Request $request, Response $response): bool
     {
-        return str_contains((string) $response->headers->get('Content-Type', ''), 'text/html')
+        return str_contains($response->headers->get('Content-Type', ''), 'text/html')
             && $this->resolver->supports($request);
     }
 
