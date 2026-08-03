@@ -1,3 +1,22 @@
+## [1.1.5](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.4...v1.1.5) (2026-08-03)
+
+### :repeat: Chores
+
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.32.5 ([2d7747d](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/2d7747d8cb208c2b7fe75a61aba4eca8e0908065))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.32.6 ([9ac9d5d](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/9ac9d5da83545a046e375e2f6301f97147acdade))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.32.7 ([0fd167e](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/0fd167ecadf18f8b0386b10d18266508707144fd))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.33.0 ([58b0d56](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/58b0d56e9cc78082ad86f2e892ac12e141f1bea6))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.34.0 ([bc424d3](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/bc424d350ffaa16566c3f3b421d6c82e0dfd636f))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.34.1 ([7cd08b1](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/7cd08b1c7f117249db980ade35f61623fc7afc46))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.34.2 ([16e7196](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/16e7196530ef71a603d2c339773c0d49f392b3e6))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.35.0 ([f049895](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/f049895331e52e2b1a246136d9805b20c5f187d4))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.35.1 ([069a2a1](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/069a2a1efea08bdc1e42d54e27c9d85a7c7abd2b))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.35.2 ([80e172e](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/80e172ea61b8d42fe40a662d8b479a825ec19d32))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.36.0 ([537049f](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/537049f20556a3282d10591ec21226cf01b696ac))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.36.2 ([a4f9afd](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/a4f9afdb671d60ec581e123648486ae2e8428ce5))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.36.4 ([ff089fd](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/ff089fd235c848d32f3771d2daad6fc5f41ada94))
+* **security:** Templates auf devops/repo-templates abgleichen ([e0ff29d](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/e0ff29ddd1af2c487a5b22e824a645ec95316473))
+
 ## [1.1.4](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.3...v1.1.4) (2026-08-01)
 
 ### :bug: Fixes
