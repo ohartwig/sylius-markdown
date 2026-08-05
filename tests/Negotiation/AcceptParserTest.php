@@ -83,6 +83,40 @@ final class AcceptParserTest extends TestCase
             true,
             'a malformed q is clamped, not honoured as a super-preference',
         ];
+
+        /*
+         * The clamp is only observable on a competitor. An out-of-range q on
+         * markdown itself wins either way, so asserting that alone stays green
+         * with the clamp deleted and proves nothing about it.
+         */
+        yield 'out-of-range q on a competitor' => [
+            'text/markdown, text/html;q=5',
+            true,
+            'a competitor cannot buy priority with an illegal q above 1',
+        ];
+
+        yield 'negative q' => [
+            'text/markdown;q=-1, text/html;q=0.5',
+            false,
+            'q=0 and below is a rejection, however it is spelled',
+        ];
+
+        /*
+         * Doubled and trailing commas turn up in hand-written client headers.
+         * The empty entry must be dropped, not parsed as a nameless media type
+         * -- that would default to q=1 and outrank a weakly preferred Markdown.
+         */
+        yield 'trailing comma beside a weak preference' => [
+            'text/markdown;q=0.5,',
+            true,
+            'an empty list entry must not become a full-quality competitor',
+        ];
+
+        yield 'doubled commas' => [
+            'text/markdown,,text/html;q=0.5',
+            true,
+            'the empty entry is skipped and the real competitor still loses',
+        ];
     }
 
     public function testMissingHeaderIsNotARequest(): void
