@@ -1,3 +1,30 @@
+## [1.1.6](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.5...v1.1.6) (2026-08-12)
+
+### :bug: Fixes
+
+* **deps:** update dependency sylius/sylius to ^2.0.18 [security] ([0a5927d](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/0a5927da1b9618b0cd7d2ea1ef23c8ed139db83a))
+* **deps:** update dependency twig/twig to ^3.11.2 [security] ([2355f13](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/2355f13dc494aee80ef810ef7acd937798054cfa))
+
+### :white_check_mark: Tests
+
+* cover provider fall-through and the Vary counterpart header ([cd6fc90](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/cd6fc90b9b91c3d666b6ac166d1dd1763983481a))
+* cover the bundle wiring and close two gaps in the Accept parser ([ef8e586](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/ef8e5866bbf71499296ee51e54e8c6fb67c86fc3))
+* cover the product provider through its real template ([a0058b9](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/a0058b980d428a4c4b434622a809dabe8ec93f5c))
+* read the whole suite when computing the coverage gate ([df86b66](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/df86b6609bb16503432a53e47634e55e4e9b525f))
+
+### :repeat: Continuous Integrations
+
+* follow the composed pipeline on [@1](https://git.ole-hartwig.eu/1) instead of an exact pin ([1273014](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/12730145e5ce14ac6ceed010607b911f1b2f364d))
+
+### :repeat: Chores
+
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.36.12 ([344c722](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/344c722a7961332c7f592f2eae9fb9de050c02f1))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.36.5 ([7f07095](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/7f0709569568187e68a7c51a2ea0a0f43b3a72cf))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.36.6 ([55cfacc](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/55cfacc8e1a0558d3d78f80b7f7f87393920f5b3))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.36.8 ([8a85613](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/8a8561379acb0e5b65c07c2db415e9f253ee3572))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v1.36.9 ([9bd0597](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/9bd05974f1927057c8da31291f2e8a4276818187))
+* **deps:** update dependency phpunit/phpunit to ^11.5.50 [security] ([65b1eb8](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/65b1eb85b64fe1f8b8127603778c1fee280f2b7a))
+
 ## [1.1.5](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.4...v1.1.5) (2026-08-03)
 
 ### :repeat: Chores
