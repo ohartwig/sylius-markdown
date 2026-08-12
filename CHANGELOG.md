@@ -1,3 +1,13 @@
+## [1.1.8](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.7...v1.1.8) (2026-08-12)
+
+### :bug: Fixes
+
+* **deps:** update dependency php to ^8.5.9 ([8502d80](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/8502d8034663385ecbbc23905a557675e278026a))
+
+### :repeat: Chores
+
+* **deps:** update dependency phpstan/phpstan to ^2.2.8 ([178a269](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/178a269b103891c088bf9e972f551af66b4fb3f6))
+
 ## [1.1.7](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.6...v1.1.7) (2026-08-12)
 
 ### :bug: Fixes
