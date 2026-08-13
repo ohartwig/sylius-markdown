@@ -1,3 +1,14 @@
+## [1.1.9](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.8...v1.1.9) (2026-08-13)
+
+### :bug: Fixes
+
+* **deps:** update dependency sylius/sylius to ^2.2.8 ([3f5e648](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/3f5e648f735c642d37acd862a993e16b20899d5c))
+* **deps:** update dependency twig/twig to ^3.28.0 ([867f108](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/867f108635837b12841be77706209e4a488ab083))
+
+### :repeat: Chores
+
+* **deps:** update dependency phpunit/phpunit to ^11.5.56 ([57e2d34](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/57e2d34cad26a9cd1a77e0de1b9f7b7dd0bac050))
+
 ## [1.1.8](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.7...v1.1.8) (2026-08-12)
 
 ### :bug: Fixes
