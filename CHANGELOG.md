@@ -1,3 +1,9 @@
+## [1.1.10](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.9...v1.1.10) (2026-08-14)
+
+### :bug: Fixes
+
+* allow the infection extension installer plugin ([ce9da08](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/ce9da08f991db722b58315e56834fcd036f43f6a))
+
 ## [1.1.9](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.8...v1.1.9) (2026-08-13)
 
 ### :bug: Fixes
