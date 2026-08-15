@@ -1,3 +1,9 @@
+## [1.1.11](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.10...v1.1.11) (2026-08-15)
+
+### :repeat: Chores
+
+* **ci:** enrol the Renovate bot's signing key ([dc1685c](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/dc1685c482d1cf40bee318e305b2c03f649c5ac9))
+
 ## [1.1.10](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.9...v1.1.10) (2026-08-14)
 
 ### :bug: Fixes
