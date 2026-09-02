@@ -1,3 +1,9 @@
+## [1.1.17](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.16...v1.1.17) (2026-09-02)
+
+### :bug: Fixes
+
+* **deps:** update dependency php to ^8.5.10 ([df81da7](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/df81da7f1695227ff4b8a7b5e9fccd54a37ba9c4))
+
 ## [1.1.16](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.15...v1.1.16) (2026-09-01)
 
 ### :repeat: Chores
