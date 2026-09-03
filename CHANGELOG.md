@@ -1,3 +1,9 @@
+## [1.1.19](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.18...v1.1.19) (2026-09-03)
+
+### :bug: Fixes
+
+* **deps:** update dependency sylius/sylius to ^2.2.9 ([99371f9](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/99371f972d6b9c05960e3e288f7ea3d3792f683e))
+
 ## [1.1.18](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.17...v1.1.18) (2026-09-02)
 
 ### :repeat: Chores
