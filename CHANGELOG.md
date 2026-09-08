@@ -1,3 +1,13 @@
+## [1.1.21](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.20...v1.1.21) (2026-09-08)
+
+### :bug: Fixes
+
+* **deps:** update dependency league/html-to-markdown to ^5.1.2 ([5785dfb](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/5785dfb66468759391749a1d89f3bb4c3e6d3fdd))
+
+### :repeat: Chores
+
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v2 ([c7f8a09](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/c7f8a09d68151efa7d94b90c3ce45ff8bf3058f4))
+
 ## [1.1.20](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.19...v1.1.20) (2026-09-04)
 
 ### :repeat: Chores
