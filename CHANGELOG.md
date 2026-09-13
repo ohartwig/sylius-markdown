@@ -1,3 +1,13 @@
+## [1.1.22](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.21...v1.1.22) (2026-09-13)
+
+### :repeat: Continuous Integrations
+
+* release with yasrt ([476fa08](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/476fa08ad99ec4b49c054e73f2b5c26dc27668ad))
+
+### :repeat: Chores
+
+* **deps:** update dependency phpstan/phpstan to ^2.2.14 ([4cd4805](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/4cd4805cd3e0d3443d78972a8f0f1350b5848f4e))
+
 ## [1.1.21](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.20...v1.1.21) (2026-09-08)
 
 ### :bug: Fixes
