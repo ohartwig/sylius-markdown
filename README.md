@@ -40,7 +40,7 @@ navigation, footer, cookie banner and related-product carousels — furniture an
 agent has to discard, if it can tell it apart from the content at all. Each
 resource type gets a template over its entity instead:
 
-```
+```text
 templates/product.md.twig
 ```
 
@@ -81,7 +81,7 @@ in the tail, and counting it would mean no client could ever request Markdown.
 
 ## Response
 
-```
+```text
 Content-Type: text/markdown; charset=utf-8
 Vary: Accept
 X-Markdown-Tokens: 412
