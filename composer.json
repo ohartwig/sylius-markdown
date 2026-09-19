@@ -32,7 +32,7 @@
         "symfony/event-dispatcher": "^7.4 || ^8.0",
         "symfony/http-foundation": "^7.4 || ^8.0",
         "symfony/http-kernel": "^7.4 || ^8.0",
-        "twig/twig": "^3.28.0"
+        "twig/twig": "^3.29.0"
     },
     "require-dev": {
         "moselwal/dev-sylius": "^1.0",
