@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2026 Kai Ole Hartwig
+SPDX-FileCopyrightText: 2026 Kai Ole Hartwig <mail@ole-hartwig.eu>
 SPDX-License-Identifier: MIT
 -->
 
@@ -131,6 +131,9 @@ Purge any shared cache afterwards so stored Markdown variants expire.
 
 Report vulnerabilities privately — see [SECURITY.md](SECURITY.md). Advisories
 are published as CSAF 2.0 at <https://ole-hartwig.eu/.well-known/csaf/>.
+
+The family threat model, covering this package, is at
+<https://github.com/ohartwig/sylius-agent-ready/blob/main/docs/threat-model.md>.
 
 ## Licence
 
