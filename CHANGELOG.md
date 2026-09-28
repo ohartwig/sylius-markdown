@@ -1,3 +1,15 @@
+## [1.1.29](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.28...v1.1.29) (2026-09-28)
+
+### :memo: Documentation
+
+* link the family threat model from the README ([0b62c79](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/0b62c79b033789306aab4cf2785b28f301534d9d))
+* point project metadata and contribution paths at GitHub ([dcb431c](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/dcb431ca5e7fa68ceaddfd1c8095e018549810c3))
+
+### :repeat: Chores
+
+* **reuse:** cover the template-synced .mise.toml and signing key ([2b400d9](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/2b400d9761fe27ac895264e8c6433956558c84b5))
+* **license:** name the copyright holder with a contact address ([580b8ef](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/580b8ef34942ba8c851da8c40b7036f90097bdd4))
+
 ## [1.1.28](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.27...v1.1.28) (2026-09-27)
 
 ### :bug: Fixes
