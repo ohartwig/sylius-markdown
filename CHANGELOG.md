@@ -1,3 +1,13 @@
+## [1.1.30](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.29...v1.1.30) (2026-09-29)
+
+### :repeat: Continuous Integrations
+
+* mirror releases to GitHub and notify Packagist ([603ffd1](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/603ffd1b75a4edf80016ac89227ecbd0c3688357))
+
+### :repeat: Chores
+
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v2.21.4 ([f8e56bc](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/f8e56bc10883fc3132fb1ad39827d095b577949e))
+
 ## [1.1.29](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.28...v1.1.29) (2026-09-28)
 
 ### :memo: Documentation
