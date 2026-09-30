@@ -1,3 +1,15 @@
+## [1.1.32](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.31...v1.1.32) (2026-09-30)
+
+### :bug: Fixes
+
+* **deps:** update dependency sylius/sylius to ^2.3.0 ([92408ec](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/92408ec8a502f7ebfc06cb1065c6640b965a1f37))
+
+### :repeat: Continuous Integrations
+
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v2.21.16 ([1eef5e3](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/1eef5e3c9de149c1c85aa3fb7bb13510acb3f2d3))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v2.21.12 ([0b98214](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/0b98214b78d875cdb93c3585f158dde07b012a08))
+* **deps:** update dependency devops/ci-cd-components/composed-default-pipelines to v2.21.10 ([2ccd8b0](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/2ccd8b042bba74a6fcea2a2af1f6acb008609542))
+
 ## [1.1.31](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.30...v1.1.31) (2026-09-29)
 
 ### :repeat: Continuous Integrations
