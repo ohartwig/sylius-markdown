@@ -1,3 +1,9 @@
+## [1.1.34](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.33...v1.1.34) (2026-10-04)
+
+### :repeat: Chores
+
+* **repo-templates:** sync ([994aefe](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/994aefed7f42f7cc360b01b556f35a787f61c393))
+
 ## [1.1.33](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.32...v1.1.33) (2026-10-04)
 
 ### :bug: Fixes
