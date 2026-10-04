@@ -1,3 +1,13 @@
+## [1.1.33](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.32...v1.1.33) (2026-10-04)
+
+### :bug: Fixes
+
+* **deps:** accept Sylius 2.2.9 again ([e7d74d2](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/e7d74d23329f8996b9f4354f0e1b6449492d3bd0))
+
+### :repeat: Continuous Integrations
+
+* follow composed-default-pipelines on the rolling major tag ([48749b7](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/48749b70bd53f3fc7e6c6f76517f3e5afeba5708))
+
 ## [1.1.32](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.31...v1.1.32) (2026-09-30)
 
 ### :bug: Fixes
