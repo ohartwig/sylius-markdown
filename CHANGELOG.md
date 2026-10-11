@@ -1,3 +1,9 @@
+## [1.1.40](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.39...v1.1.40) (2026-10-11)
+
+### :bug: Fixes
+
+* **deps:** update dependency league/html-to-markdown to ^5.1.4 ([6e15644](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/6e15644af675eca8aee30992b3b71a257f367b5f))
+
 ## [1.1.39](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.38...v1.1.39) (2026-10-09)
 
 ### :repeat: Chores
