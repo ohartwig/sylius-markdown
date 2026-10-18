@@ -1,3 +1,9 @@
+## [1.1.42](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.41...v1.1.42) (2026-10-18)
+
+### :bug: Fixes
+
+* admit PHP 8.3 and test the floor on it ([bc672d0](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/bc672d019c6bac7b861067e4a89f2bbb71e2e5c0))
+
 ## [1.1.41](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.40...v1.1.41) (2026-10-16)
 
 ### :repeat: Chores
