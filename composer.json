@@ -23,7 +23,7 @@
         "source": "https://github.com/ohartwig/sylius-markdown"
     },
     "require": {
-        "php": "^8.5.11",
+        "php": "^8.3",
         "koh/sylius-agent-contracts": "^1.0",
         "league/html-to-markdown": "^5.1.4",
         "sylius/sylius": "^2.2.9 || ^2.3.0",
