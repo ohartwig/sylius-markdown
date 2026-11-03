@@ -7,6 +7,7 @@ declare(strict_types=1);
 
 namespace Koh\SyliusMarkdown\Twig;
 
+use Koh\SyliusAgentContracts\Model\MarkdownText;
 use League\HTMLToMarkdown\HtmlConverter;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
@@ -28,7 +29,21 @@ final class MarkdownExtension extends AbstractExtension
     {
         return [
             new TwigFilter('markdown_from_html', $this->fromHtml(...)),
+            // Output is plain Markdown text, not HTML: the HTML autoescaper would
+            // turn an ordinary "Tom & Jerry" into entities. Angle brackets are
+            // entity-encoded here instead, so no raw HTML reaches the document.
+            new TwigFilter('markdown_inline', $this->inline(...), ['is_safe' => ['all']]),
         ];
+    }
+
+    /**
+     * Flattens a field that sits in a structural position (heading, blockquote,
+     * table cell, list item) to a single line, so it cannot forge a heading or
+     * a list item of its own.
+     */
+    public function inline(?string $text): string
+    {
+        return strtr(MarkdownText::inline($text ?? ''), ['<' => '&lt;', '>' => '&gt;']);
     }
 
     public function fromHtml(?string $html): string
