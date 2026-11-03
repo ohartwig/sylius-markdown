@@ -8,10 +8,10 @@
     Override in an application at
     templates/bundles/KohSyliusMarkdownBundle/product.md.twig.
 #}
-# {{ product.getTranslation(locale).name|default(product.code) }}
+# {{ product.getTranslation(locale).name|default(product.code)|markdown_inline }}
 {% set shortDescription = product.getTranslation(locale).shortDescription|default('') %}
 {% if shortDescription %}
-> {{ shortDescription|striptags }}
+> {{ shortDescription|striptags|markdown_inline }}
 {% endif %}
 {% set variants = product.enabledVariants %}
 {% if variants|length %}
@@ -21,7 +21,7 @@
 | --- | --- | --- | --- |
 {% for variant in variants %}
 {%- set pricing = variant.getChannelPricingForChannel(channel) -%}
-| {{ variant.getTranslation(locale).name|default(variant.code) }} | {{ variant.code }} | {% if pricing and pricing.price is not null %}{{ (pricing.price / 100)|number_format(2, ',', '.') }} {{ channel.baseCurrency.code }}{% else %}—{% endif %} | {% if variant.inStock %}in stock{% else %}out of stock{% endif %} |
+| {{ variant.getTranslation(locale).name|default(variant.code)|markdown_inline|replace({'|': '\\|'}) }} | {{ variant.code }} | {% if pricing and pricing.price is not null %}{{ (pricing.price / 100)|number_format(2, ',', '.') }} {{ channel.baseCurrency.code }}{% else %}—{% endif %} | {% if variant.inStock %}in stock{% else %}out of stock{% endif %} |
 {% endfor %}
 {% endif %}
 {% set description = product.getTranslation(locale).description|default('') %}
@@ -34,7 +34,7 @@
 ## Categories
 
 {% for taxon in product.taxons %}
-- {{ taxon.getTranslation(locale).name|default(taxon.code) }}
+- {{ taxon.getTranslation(locale).name|default(taxon.code)|markdown_inline }}
 {% endfor %}
 {% endif %}
 
