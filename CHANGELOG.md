@@ -1,3 +1,9 @@
+## [1.1.46](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.45...v1.1.46) (2026-11-03)
+
+### :bug: Fixes
+
+* **security:** AUD-069 F01 — flatten product name, short description and variant/taxon names in product.md.twig ([258583c](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/258583c9435a476c36f69ea7b01b469f85196241))
+
 ## [1.1.45](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.44...v1.1.45) (2026-10-30)
 
 ### :repeat: Chores
