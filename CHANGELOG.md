@@ -1,3 +1,9 @@
+## [1.1.48](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.47...v1.1.48) (2026-11-14)
+
+### :repeat: Chores
+
+* **deps:** update dependency phpunit/phpunit to ^11.5.58 ([c150623](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/c150623ca2bafd7d2423e669e2e7bae620cfd8af))
+
 ## [1.1.47](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.46...v1.1.47) (2026-11-06)
 
 ### :repeat: Chores
