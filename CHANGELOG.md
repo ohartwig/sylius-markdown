@@ -1,3 +1,9 @@
+## [1.1.49](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.48...v1.1.49) (2026-11-17)
+
+### :repeat: Chores
+
+* **deps:** update dependency phpstan/phpstan to ^2.3.6 ([48a9d7e](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/48a9d7e98bd0b6a91db7ff0f3299fce0c6ea55e7))
+
 ## [1.1.48](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.47...v1.1.48) (2026-11-14)
 
 ### :repeat: Chores
