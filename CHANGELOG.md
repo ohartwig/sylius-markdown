@@ -1,3 +1,9 @@
+## [1.1.50](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.49...v1.1.50) (2026-11-17)
+
+### :bug: Fixes
+
+* **composer:** point homepage at the package page ([b68609e](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/b68609efb576b741bcdd192b51c9983bf57e8d87))
+
 ## [1.1.49](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.48...v1.1.49) (2026-11-17)
 
 ### :repeat: Chores
