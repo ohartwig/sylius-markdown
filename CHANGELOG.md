@@ -1,3 +1,9 @@
+## [1.1.52](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.51...v1.1.52) (2026-11-24)
+
+### :bug: Fixes
+
+* **deps:** update dependency twig/twig to ^3.31.1 [security] ([f97038d](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/f97038df4349ffb2200822333a5bdb5fc528821b))
+
 ## [1.1.51](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.50...v1.1.51) (2026-11-20)
 
 ### :repeat: Chores
