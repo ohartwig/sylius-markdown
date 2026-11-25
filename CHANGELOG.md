@@ -1,3 +1,9 @@
+## [1.2.0](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.52...v1.2.0) (2026-11-25)
+
+### :sparkles: Features
+
+* serve the storefront homepage as Markdown ([501f13e](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/commit/501f13e414c35d14bbd4a397f6bcb5a8db4073eb))
+
 ## [1.1.52](https://git.ole-hartwig.eu/ai-ready-platform/platform/sylius-markdown/compare/v1.1.51...v1.1.52) (2026-11-24)
 
 ### :bug: Fixes
