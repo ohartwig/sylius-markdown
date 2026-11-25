@@ -1,0 +1,27 @@
+{#
+    SPDX-FileCopyrightText: 2026 Kai Ole Hartwig <mail@ole-hartwig.eu>
+    SPDX-License-Identifier: MIT
+
+    Markdown representation of the storefront homepage: the shop and its top
+    categories, built from the channel rather than from the rendered page.
+
+    Override in an application at
+    templates/bundles/KohSyliusMarkdownBundle/homepage.md.twig.
+#}
+# {{ name|markdown_inline }}
+{% if description %}
+
+> {{ description|markdown_inline }}
+{% endif %}
+{% if categories|length %}
+
+## Categories
+
+{% for category in categories %}
+- [{{ category.name|markdown_inline|replace({'[': '\\[', ']': '\\]'}) }}]({{ category.url }}){{ category.description ? ': ' ~ category.description|markdown_inline : '' }}
+{% endfor %}
+{% endif %}
+
+---
+
+Source: {{ url }}
