@@ -9,6 +9,7 @@ use Koh\SyliusAgentContracts\Context\AgentContextFactoryInterface;
 use Koh\SyliusMarkdown\EventListener\MarkdownNegotiationListener;
 use Koh\SyliusMarkdown\EventListener\VaryAcceptContributor;
 use Koh\SyliusMarkdown\Negotiation\AcceptParser;
+use Koh\SyliusMarkdown\Provider\HomepageMarkdownProvider;
 use Koh\SyliusMarkdown\Provider\ProductMarkdownProvider;
 use Koh\SyliusMarkdown\Renderer\MarkdownNormalizer;
 use Koh\SyliusMarkdown\Renderer\MarkdownResolver;
@@ -37,6 +38,13 @@ return static function (ContainerConfigurator $container): void {
     $services->set(ProductMarkdownProvider::class)
         ->args([
             service('sylius.repository.product'),
+            service('twig'),
+            service(MarkdownNormalizer::class),
+        ])
+        ->tag('koh_agent.markdown');
+
+    $services->set(HomepageMarkdownProvider::class)
+        ->args([
             service('twig'),
             service(MarkdownNormalizer::class),
         ])

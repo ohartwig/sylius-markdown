@@ -38,6 +38,10 @@ final class KohSyliusMarkdownBundle extends AbstractBundle
                     ->defaultTrue()
                     ->info('Serve Markdown for product pages.')
                 ->end()
+                ->booleanNode('homepage')
+                    ->defaultTrue()
+                    ->info('Serve Markdown for the storefront homepage: the shop and its top categories.')
+                ->end()
             ->end();
     }
 
@@ -53,6 +57,10 @@ final class KohSyliusMarkdownBundle extends AbstractBundle
 
         if (false === ($config['products'] ?? true)) {
             $builder->removeDefinition(Provider\ProductMarkdownProvider::class);
+        }
+
+        if (false === ($config['homepage'] ?? true)) {
+            $builder->removeDefinition(Provider\HomepageMarkdownProvider::class);
         }
     }
 }

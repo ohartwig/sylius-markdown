@@ -11,6 +11,7 @@ use Koh\SyliusMarkdown\EventListener\MarkdownNegotiationListener;
 use Koh\SyliusMarkdown\EventListener\VaryAcceptContributor;
 use Koh\SyliusMarkdown\KohSyliusMarkdownBundle;
 use Koh\SyliusMarkdown\Negotiation\AcceptParser;
+use Koh\SyliusMarkdown\Provider\HomepageMarkdownProvider;
 use Koh\SyliusMarkdown\Provider\ProductMarkdownProvider;
 use Koh\SyliusMarkdown\Renderer\MarkdownNormalizer;
 use Koh\SyliusMarkdown\Renderer\MarkdownResolver;
@@ -38,6 +39,7 @@ final class KohSyliusMarkdownBundleTest extends TestCase
 
         self::assertFileExists($path.'/config/services.php');
         self::assertFileExists($path.'/templates/product.md.twig');
+        self::assertFileExists($path.'/templates/homepage.md.twig');
     }
 
     public function testTheDefaultsAreTheDocumentedOnes(): void
@@ -76,6 +78,8 @@ final class KohSyliusMarkdownBundleTest extends TestCase
         yield 'twig extension' => [MarkdownExtension::class];
 
         yield 'product provider' => [ProductMarkdownProvider::class];
+
+        yield 'homepage provider' => [HomepageMarkdownProvider::class];
 
         yield 'negotiation listener' => [MarkdownNegotiationListener::class];
 
@@ -122,6 +126,15 @@ final class KohSyliusMarkdownBundleTest extends TestCase
 
         self::assertFalse($container->hasDefinition(ProductMarkdownProvider::class));
         self::assertTrue($container->hasDefinition(MarkdownResolver::class), 'the rest of the bundle stays');
+    }
+
+    public function testDisablingTheHomepageRemovesOnlyItsProvider(): void
+    {
+        $container = $this->load(['homepage' => false]);
+
+        self::assertFalse($container->hasDefinition(HomepageMarkdownProvider::class));
+        self::assertTrue($container->hasDefinition(ProductMarkdownProvider::class));
+        self::assertNotEmpty($this->load([])->getDefinition(HomepageMarkdownProvider::class)->getTag('koh_agent.markdown'));
     }
 
     public function testProductsAreServedUnlessTurnedOff(): void

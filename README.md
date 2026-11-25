@@ -29,7 +29,20 @@ koh_markdown:
     enabled: true
     max_age: 3600
     products: true      # serve Markdown for product pages
+    homepage: true      # serve Markdown for the storefront homepage
 ```
+
+## What is covered
+
+| Route | Document |
+|---|---|
+| `sylius_shop_product_show` | the product: variants with prices and stock, description, categories |
+| `sylius_shop_homepage` | the shop: channel name and description, the first level of the menu taxon with links |
+
+The homepage is where an agent arriving at the bare origin lands after the
+locale redirect, so it is the page a client tries first. Its document is an
+entry point — who the shop is and where the catalogue starts — not a copy of
+the hero and teaser blocks. Any other route answers HTML as before.
 
 ## Two decisions worth knowing about
 
@@ -42,10 +55,11 @@ resource type gets a template over its entity instead:
 
 ```text
 templates/product.md.twig
+templates/homepage.md.twig
 ```
 
-Override it in your application at
-`templates/bundles/KohSyliusMarkdownBundle/product.md.twig`.
+Override them in your application at
+`templates/bundles/KohSyliusMarkdownBundle/<name>.md.twig`.
 
 HTML still appears in one place: rich-text fields are authored as HTML in the
 admin. Those single fields go through `league/html-to-markdown` via the
